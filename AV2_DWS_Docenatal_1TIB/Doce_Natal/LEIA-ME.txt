@@ -1,0 +1,71 @@
+DOCE NATAL — CONFEITARIA ARTESANAL
+Projeto escolar • Turma 1TIB • 2026 • Ana Vitória
+========================================================
+
+COMO ABRIR
+1. Extraia o arquivo ZIP inteiro em uma pasta.
+2. Abra index.html no Google Chrome, Microsoft Edge ou Firefox.
+3. Não mova apenas o HTML: as pastas css, js, img e audio são necessárias.
+4. Use o menu para acessar as cinco páginas.
+
+PÁGINAS
+- index.html: início, fotos, slideshow, destaques e contagem de Natal.
+- produtos.html: catálogo de 50 produtos, pesquisa, categorias, preços,
+  detalhes e sacola demonstrativa.
+- sobre.html: apresentação da confeitaria e autoria do projeto.
+- ofertas.html: produtos em destaque.
+- contato.html: formulário com validação feita no navegador.
+
+PASTAS E ARQUIVOS
+Doce_Natal/
+|-- index.html
+|-- produtos.html
+|-- sobre.html
+|-- ofertas.html
+|-- contato.html
+|-- css/
+|   |-- style.css       (aparência, cores e animações)
+|   `-- responsivo.css  (adaptação para celular e tablet)
+|-- js/
+|   |-- produtos.js     (50 produtos e caminhos das fotos)
+|   |-- script.js       (slideshow, busca, carrinho, neve, luzes etc.)
+|   `-- musica.js       (ligar e desligar o áudio)
+|-- img/
+|   |-- slide-1.webp
+|   |-- slide-2.webp
+|   |-- slide-3.webp
+|   `-- produtos/       (50 imagens WebP separadas, nomes descritivos)
+`-- audio/
+    `-- natal_av2_web.mp3
+
+COMO EDITAR OS PRODUTOS
+Abra js/produtos.js. Cada objeto tem id, nome, categoria, preco,
+imagem e destaque. A propriedade imagem aponta para um arquivo na pasta
+img/produtos/. Por exemplo:
+  imagem: "img/produtos/panetone-artesanal-de-frutas.webp"
+Não altere o caminho sem alterar também o arquivo de imagem.
+
+MÚSICA
+O botão no cabeçalho liga e desliga a trilha sonora. Ele depende do
+clique do visitante, porque os navegadores bloqueiam som automático.
+Arquivo usado: audio/natal_av2_web.mp3
+
+ANIMAÇÕES
+- Neve suave e pisca-pisca alternado: CSS + criação de elementos pelo JS.
+- Slideshow de três imagens: botões, marcadores e troca automática.
+- Parallax: camadas decorativas que se movem discretamente na rolagem.
+- Preferência por movimento reduzido é respeitada pelo navegador.
+
+IMPORTANTE
+- Loja fictícia para atividade escolar. Valores ilustrativos.
+- A sacola funciona no navegador; não processa compras/pagamentos.
+- O formulário valida os dados, mas não envia mensagens a um servidor.
+- As imagens são ilustrativas e foram preparadas a partir de imagens
+  digitais do projeto; não são fotografias de produtos reais à venda.
+
+CONFERÊNCIAS REALIZADAS
+- 5 páginas e links de navegação conferidos.
+- 50 produtos, 5 categorias e 50 arquivos de imagem distintos.
+- Sintaxe do JavaScript e estrutura HTML/CSS inspecionadas.
+- Testes no navegador para catálogo, filtro, busca, sacola, slideshow,
+  botão de música, menu responsivo e validação do formulário.

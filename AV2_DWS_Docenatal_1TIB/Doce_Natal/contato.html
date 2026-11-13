@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#862c43">
+  <meta name="description" content="Doce Natal — catálogo fictício de confeitaria artesanal para projeto escolar.">
+  <title>Contato | Doce Natal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+<div id="luzes" class="luzes" aria-hidden="true"></div>
+<div id="neve" class="neve" aria-hidden="true"></div>
+<header class="cabecalho">
+  <div class="container topo">
+    <a class="marca" href="index.html" aria-label="Doce Natal — início">
+      <span class="selo">DN<span class="selo-estrela">✦</span></span>
+      <span class="marca-texto">Doce <em>Natal</em><small>CONFEITARIA ARTESANAL</small></span>
+    </a>
+    <button type="button" class="btn-menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="ofertas.html">Ofertas</a>
+      <a href="contato.html" class="ativo" aria-current="page">Contato</a>
+    </nav>
+    <button type="button" class="btn-musica" id="btn-musica" aria-pressed="false">♫ Ligar música</button>
+    <a class="sacola" href="produtos.html#carrinho">Sacola <span id="qtd-carrinho">0</span></a>
+  </div>
+</header>
+<main>
+  <section class="pagina-intro container"><span class="sobretitulo">CONTATO</span><h1>Fale com a gente</h1><p>Envie uma mensagem de exemplo pelo formulário.</p></section>
+  <section class="container bloco contato-grid">
+    <form id="form-contato" class="painel" novalidate>
+      <h2>Sua mensagem</h2>
+      <label for="nome">Nome</label><input id="nome" name="nome" autocomplete="name" required placeholder="Seu nome">
+      <label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="voce@exemplo.com">
+      <label for="assunto">Assunto</label><select id="assunto" required><option value="">Selecione...</option><option>Produtos</option><option>Presentes</option><option>Outro assunto</option></select>
+      <label for="mensagem">Mensagem</label><textarea id="mensagem" rows="5" required placeholder="Escreva aqui..."></textarea>
+      <button class="botao" type="submit">Validar mensagem →</button>
+      <p id="mensagem-form" role="status" aria-live="polite"></p>
+    </form>
+    <aside class="painel painel-rosa"><span class="sobretitulo">PROJETO ESCOLAR</span><h2>Sobre este contato</h2><p>Este é um formulário demonstrativo para a atividade de desenvolvimento web. Ele valida os campos no navegador, mas não envia nem armazena mensagens.</p></aside>
+  </section>
+</main>
+<footer class="rodape">
+  <div class="container rodape-linha">
+    <strong>Doce Natal</strong>
+    <p>Projeto escolar • 1TIB • 2026 • Ana Vitória</p>
+    <a href="contato.html">Contato</a>
+  </div>
+</footer>
+<button id="topo" class="voltar" type="button" aria-label="Voltar ao topo">↑</button>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<audio id="musica-natal" preload="metadata" loop>
+  <source src="audio/natal_av2_web.mp3" type="audio/mpeg">
+</audio>
+<script src="js/produtos.js" defer></script>
+<script src="js/script.js" defer></script>
+<script src="js/musica.js" defer></script>
+</body>
+</html>

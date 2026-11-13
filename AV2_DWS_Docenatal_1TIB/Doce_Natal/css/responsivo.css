@@ -1,0 +1,242 @@
+/* =============================================================
+   DOCE NATAL — Adaptação para tablet e celular
+   ============================================================= */
+@media (max-width: 1100px) {
+  .topo {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+
+  .btn-menu {
+    display: block;
+    margin-left: auto;
+    padding: 8px 12px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    background: #fff;
+  }
+
+  .menu {
+    display: none;
+    order: 5;
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+    gap: 0;
+    flex-direction: column;
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    background: #fff;
+  }
+
+  .menu.aberto {
+    display: flex;
+  }
+
+  .menu a {
+    padding: 10px;
+  }
+
+  .grade-produtos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-texto {
+    padding: 48px 0 0;
+  }
+
+  .vitrine-grafica {
+    height: 350px;
+  }
+
+  .grade-produtos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filtros {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filtros label:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .historia,
+  .contato-grid,
+  .equipe {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 599px) {
+  .container {
+    width: calc(100% - 30px);
+  }
+
+  .topo {
+    min-height: 80px;
+  }
+
+  .marca-texto {
+    font-size: 21px;
+  }
+
+  .selo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .btn-musica {
+    display: inline-flex;
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
+  .sacola {
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
+  .hero-grid {
+    gap: 18px;
+    min-height: auto;
+  }
+
+  .hero-texto {
+    padding-top: 45px;
+  }
+
+  .hero h1 {
+    font-size: clamp(37px, 9vw, 49px);
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .vitrine-grafica {
+    height: 285px;
+  }
+
+  .hero-foto {
+    min-height: 285px;
+  }
+
+  .bloco,
+  .faixa {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .carrossel,
+  .carrossel .slide {
+    min-height: 510px;
+  }
+
+  .carrossel .slide {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 24px 22px 65px;
+  }
+
+  .carrossel .slide.ativo {
+    display: grid;
+  }
+
+  .carrossel .slide-foto {
+    width: 100%;
+    height: 230px;
+  }
+
+  .carrossel .slide h3 {
+    font-size: 28px;
+  }
+
+  .carrossel .controles {
+    left: 22px;
+    bottom: 16px;
+  }
+
+  .grade-produtos {
+    grid-template-columns: 1fr;
+  }
+
+  .card-arte.card-foto {
+    aspect-ratio: 1.2 / 1;
+  }
+
+  .filtros {
+    grid-template-columns: 1fr;
+  }
+
+  .filtros label:first-child {
+    grid-column: auto;
+  }
+
+  .rodape-linha {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pagina-intro {
+    padding-top: 48px;
+    padding-bottom: 0;
+  }
+
+  .oferta-destaque {
+    padding: 25px;
+  }
+
+  .parallax-doce {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 599px) {
+  /* Navegação organizada em duas linhas no celular. */
+  .topo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+
+  .marca {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .btn-menu {
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 0;
+    justify-self: end;
+  }
+
+  .btn-musica {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .sacola {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+  }
+
+  .menu {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+
+  .card-arte.card-foto {
+    aspect-ratio: 1 / 1;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#862c43">
+  <meta name="description" content="Doce Natal — catálogo fictício de confeitaria artesanal para projeto escolar.">
+  <title>Produtos | Doce Natal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+<div id="luzes" class="luzes" aria-hidden="true"></div>
+<div id="neve" class="neve" aria-hidden="true"></div>
+<header class="cabecalho">
+  <div class="container topo">
+    <a class="marca" href="index.html" aria-label="Doce Natal — início">
+      <span class="selo">DN<span class="selo-estrela">✦</span></span>
+      <span class="marca-texto">Doce <em>Natal</em><small>CONFEITARIA ARTESANAL</small></span>
+    </a>
+    <button type="button" class="btn-menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="produtos.html" class="ativo" aria-current="page">Produtos</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="ofertas.html">Ofertas</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <button type="button" class="btn-musica" id="btn-musica" aria-pressed="false">♫ Ligar música</button>
+    <a class="sacola" href="produtos.html#carrinho">Sacola <span id="qtd-carrinho">0</span></a>
+  </div>
+</header>
+<main>
+  <section class="pagina-intro container"><span class="sobretitulo">CATÁLOGO NATALINO</span><h1>Nossos doces</h1><p>Explore os 50 produtos, filtre por categoria e monte sua sacola.</p></section>
+  <section class="container bloco catalogo">
+    <div class="filtros">
+      <label for="busca">Pesquisar doce<input id="busca" type="search" placeholder="Ex.: panetone, chocolate..."></label>
+      <label for="categoria">Categoria<select id="categoria"><option value="todas">Todas as categorias</option></select></label>
+      <label for="ordem">Organizar por<select id="ordem"><option value="padrao">Destaques primeiro</option><option value="menor">Menor preço</option><option value="maior">Maior preço</option></select></label>
+    </div>
+    <p id="contador" class="contador" aria-live="polite"></p>
+    <div id="lista-produtos" class="grade-produtos"></div>
+  </section>
+  <section id="carrinho" class="container bloco carrinho">
+    <div class="secao-titulo"><h2>Minha sacola</h2></div>
+    <div id="itens-carrinho"></div>
+    <div class="carrinho-total">Total <strong id="total-carrinho">R$ 0,00</strong></div>
+    <p class="nota-demonstracao">Carrinho de demonstração: os pedidos não são enviados.</p>
+  </section>
+  <dialog id="modal-produto" aria-label="Detalhes do produto">
+    <button type="button" class="fechar-modal" aria-label="Fechar detalhes">×</button>
+    <div id="modal-conteudo"></div>
+  </dialog>
+</main>
+<footer class="rodape">
+  <div class="container rodape-linha">
+    <strong>Doce Natal</strong>
+    <p>Projeto escolar • 1TIB • 2026 • Ana Vitória</p>
+    <a href="contato.html">Contato</a>
+  </div>
+</footer>
+<button id="topo" class="voltar" type="button" aria-label="Voltar ao topo">↑</button>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<audio id="musica-natal" preload="metadata" loop>
+  <source src="audio/natal_av2_web.mp3" type="audio/mpeg">
+</audio>
+<script src="js/produtos.js" defer></script>
+<script src="js/script.js" defer></script>
+<script src="js/musica.js" defer></script>
+</body>
+</html>

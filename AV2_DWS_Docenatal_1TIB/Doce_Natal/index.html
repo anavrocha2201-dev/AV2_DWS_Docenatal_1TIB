@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#862c43">
+  <meta name="description" content="Doce Natal — catálogo fictício de confeitaria artesanal para projeto escolar.">
+  <title>Início | Doce Natal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+<div id="luzes" class="luzes" aria-hidden="true"></div>
+<div id="neve" class="neve" aria-hidden="true"></div>
+<header class="cabecalho">
+  <div class="container topo">
+    <a class="marca" href="index.html" aria-label="Doce Natal — início">
+      <span class="selo">DN<span class="selo-estrela">✦</span></span>
+      <span class="marca-texto">Doce <em>Natal</em><small>CONFEITARIA ARTESANAL</small></span>
+    </a>
+    <button type="button" class="btn-menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="index.html" class="ativo" aria-current="page">Início</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="ofertas.html">Ofertas</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <button type="button" class="btn-musica" id="btn-musica" aria-pressed="false">♫ Ligar música</button>
+    <a class="sacola" href="produtos.html#carrinho">Sacola <span id="qtd-carrinho">0</span></a>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-decor decor-um" data-velocidade="0.12"></div>
+    <div class="hero-decor decor-dois" data-velocidade="0.24"></div>
+    <div class="container hero-grid">
+      <div class="hero-texto revelar">
+        <span class="sobretitulo">CONFEITARIA • EDIÇÃO DE NATAL</span>
+        <h1>O sabor mais especial <em>do Natal.</em></h1>
+        <p>Panetones, bolos e doces para dividir os melhores momentos de dezembro.</p>
+        <div class="acoes">
+          <a class="botao" href="produtos.html">Conhecer os doces →</a>
+          <a class="botao botao-claro" href="sobre.html">Nossa história</a>
+        </div>
+      </div>
+      <div class="vitrine-grafica revelar">
+        <img class="hero-foto" src="img/slide-1.webp" alt="Panetone artesanal natalino" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+  <section class="faixa">
+    <div class="container">
+      <div class="secao-titulo"><span class="sobretitulo">ESCOLHAS DE DEZEMBRO</span><h2>Especialidades de Natal</h2></div>
+      <div class="carrossel" aria-label="Slideshow de especialidades">
+        <article class="slide ativo" aria-hidden="false">
+          <div class="slide-texto"><span class="sobretitulo">RECEITA TRADICIONAL</span><h3>Panetones artesanais</h3><a href="produtos.html">Ver catálogo →</a></div>
+          <img class="slide-foto" src="img/slide-1.webp" alt="Panetone de Natal com frutas" loading="lazy">
+        </article>
+        <article class="slide" aria-hidden="true">
+          <div class="slide-texto"><span class="sobretitulo">PARA COMPARTILHAR</span><h3>Bolos feitos para celebrar</h3><a href="produtos.html">Ver catálogo →</a></div>
+          <img class="slide-foto" src="img/slide-2.webp" alt="Bolo de chocolate natalino" loading="lazy">
+        </article>
+        <article class="slide" aria-hidden="true">
+          <div class="slide-texto"><span class="sobretitulo">PRESENTE DOCE</span><h3>Chocotones especiais</h3><a href="ofertas.html">Ver destaques →</a></div>
+          <img class="slide-foto" src="img/slide-3.webp" alt="Chocotone artesanal coberto de chocolate" loading="lazy">
+        </article>
+        <div class="controles">
+          <button id="anterior" type="button" aria-label="Slide anterior">←</button>
+          <div id="indicadores" class="indicadores" aria-label="Selecionar slide"></div>
+          <button id="proximo" type="button" aria-label="Próximo slide">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container bloco revelar">
+    <div class="secao-titulo"><span class="sobretitulo">NOSSO CATÁLOGO</span><h2>Mais pedidos</h2></div>
+    <div id="destaques" class="grade-produtos"></div>
+    <div class="centro"><a class="botao" href="produtos.html">Ver os 50 produtos →</a></div>
+  </section>
+  <section class="parallax-doce" aria-label="Clima de Natal">
+    <div class="parallax-camada um" data-velocidade="0.13"></div>
+    <div class="parallax-camada dois" data-velocidade="-0.09"></div>
+    <div class="parallax-camada tres" data-velocidade="0.24"></div>
+    <div class="container parallax-conteudo"><span class="sobretitulo">DOCE NATAL</span><h2>Feito para celebrar.</h2></div>
+  </section>
+  <section class="chamada">
+    <div class="container"><span class="sobretitulo">CADA DIA MAIS PERTO</span><h2>Contagem para o Natal</h2><p id="contagem" class="contagem">Preparando contagem...</p></div>
+  </section>
+</main>
+<footer class="rodape">
+  <div class="container rodape-linha">
+    <strong>Doce Natal</strong>
+    <p>Projeto escolar • 1TIB • 2026 • Ana Vitória</p>
+    <a href="contato.html">Contato</a>
+  </div>
+</footer>
+<button id="topo" class="voltar" type="button" aria-label="Voltar ao topo">↑</button>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<audio id="musica-natal" preload="metadata" loop>
+  <source src="audio/natal_av2_web.mp3" type="audio/mpeg">
+</audio>
+<script src="js/produtos.js" defer></script>
+<script src="js/script.js" defer></script>
+<script src="js/musica.js" defer></script>
+</body>
+</html>
